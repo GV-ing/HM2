@@ -1,4 +1,4 @@
-# 🤖 HM1 Project: Armando Robotic Arm Control and Simulation (ROS 2 Humble)
+# 🤖 HM2 Project: IIWA VISUAL CONTROL with ARUCO_ROS
 
 This repository contains the solution for **Homework 2** of the Robotics Lab class, focused on building ROS packages to simulate a vision-based controller for a robotic manipulator arm in the simulation environment using KDL and aruco_ros.
 
@@ -38,7 +38,7 @@ sudo apt install \
   libopencv-dev \
   libeigen3-dev
 ---
-
+```
 ## 🤖 1a. iiwa parameters
 
 The following variables become ROS2 params: traj_duration, acc_duration, total_time, trajectory_len, Kp, and the three components of the trajectory end_position. We create a launch file that starts the ros2_kdl_node loading a .yaml file (from a config folder) that contains the aforementioned parameters’ definition
