@@ -112,7 +112,7 @@ ros2 launch iiwa_bringup iiwa.launch.py   use_sim:=true start_rviz:=false   gz_a
 
 The controller subscribes to the ArUco marker pose topic and computes the joint velocity commands according to the following control law:
 
-$\dot{q} = J^{\dagger} K_p e_p + (I - J^{\dagger} J)\dot{q}_0$
+$\dot{q} = K(L(s)J_c)^{\dagger} s_d + N\dot{q}_0$
 
 where:
 
