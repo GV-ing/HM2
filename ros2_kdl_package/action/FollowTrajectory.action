@@ -1,0 +1,9 @@
+# Goal: parameters for the trajectory
+float64 traj_duration
+float64 acc_duration
+---
+# Result: final position error
+float64 final_error
+---
+# Feedback: current position error during execution
+float64 current_error

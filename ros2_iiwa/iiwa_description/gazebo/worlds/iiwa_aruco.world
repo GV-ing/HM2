@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="iiwa_aruco_world">
+    
+    <!-- ============================================ -->
+    <!-- HOMEWORK 2a: Mondo con marker ArUco         -->
+    <!-- ============================================ -->
+    
+    <gravity>0 0 -9.81</gravity>
+    
+    <!-- Plugin di sistema OBBLIGATORI per Gazebo Ignition -->
+    <!-- Senza questi, la simulazione NON funziona -->
+    <plugin filename="ignition-gazebo-physics-system" name="ignition::gazebo::systems::Physics"/>
+    <plugin filename="ignition-gazebo-user-commands-system" name="ignition::gazebo::systems::UserCommands"/>
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="ignition::gazebo::systems::SceneBroadcaster"/>
+    
+    <!-- Plugin SENSORI - CRITICO per la camera! -->
+    <plugin filename="ignition-gazebo-sensors-system" name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    
+    <!-- Luce solare -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+    
+    <!-- Piano di appoggio -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    
+    <!-- MARKER ARUCO: ID=201, size=0.5m, posizione davanti al robot -->
+    <include>
+      <uri>model://arucotag</uri>
+      <name>aruco_tag_front</name>
+      <!-- Orientamento: rivolto verso il robot -->
+      <pose>0.02 -0.53 0.6 -2.71 -1.57 0</pose>
+    </include>
+    
+    <!-- Camera GUI per visualizzazione -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>2.5 0.0 1.5 0.0 0.35 3.1416</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+    
+  </world>
+</sdf>

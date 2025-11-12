@@ -1,0 +1,48 @@
+# Compiled object files
+*.o
+*.d
+*.so
+*.a
+
+# Build directories
+build/
+devel/
+install/
+log/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*~
+*.bak
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ROS specific
+*.bag
+*.orig
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
