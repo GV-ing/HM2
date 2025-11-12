@@ -1,0 +1,21 @@
+ros2_kdl_node:
+  ros__parameters:
+    # Punto 1a (parametri di traiettoria)
+    traj_duration: 1.5      # durata della traiettoria [s]
+    acc_duration: 0.5       # durata accelerazione/decelerazione [s]
+    total_time: 1.5         # tempo totale di esecuzione [s]
+    trajectory_len: 150     # numero di campioni della traiettoria
+    Kp: 5.0                 # guadagno proporzionale per l'inseguimento cartesiano
+
+    # Punto 1a: posizione finale dell'EE; se [0,0,0] viene usata la posa di default (y specchiata)
+    end_position: [0.0, 0.0, 0.0]
+    
+    # Punto 1b (controlli di velocità + visione)
+    ctrl: "velocity_ctrl"                 # velocity_ctrl | velocity_ctrl_null | vision
+    lambda: 1.0                           # fattore di scala per l'evitamento limiti (null-space)
+    
+    # Parametri visione (usati solo se ctrl:=vision)
+    aruco_topic: "/aruco_single/pose"
+    vision_gain: [1.0, 1.0, 1.0]
+    vision_velocity_limit: 0.8
+    camera_offset: [0.0, 0.0, 0.0]       # Zero con frame ottico - offset gestito da TF
