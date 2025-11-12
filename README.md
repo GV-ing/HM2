@@ -4,13 +4,27 @@ This repository contains the solution for **Homework 2** of the Robotics Lab cla
 
 ## 📂 Repository Structure
 
-HM2
-├README
-│
-├ aruco_ros/  
-├ ros2_iiwa/      
-└ ros2_kdl_package/  
+```
+HMK2/
+├── README.md
+├── aruco_ros/              # ArUco marker detection ROS2 package
+│   ├── aruco/              # Core ArUco library
+│   ├── aruco_msgs/         # ArUco ROS2 message definitions
+│   └── aruco_ros/          # ArUco ROS2 nodes and launch files
+├── ros2_iiwa/              # KUKA IIWA robot ROS2 integration
+│   ├── iiwa_bringup/       # Launch files and configurations
+│   ├── iiwa_controllers/   # Custom controllers for IIWA
+│   ├── iiwa_description/   # URDF, meshes, and robot description
+│   └── iiwa_hardware/      # Hardware interface for real robot
+└── ros2_kdl_package/       # KDL-based motion control implementation
+    ├── include/            # Header files (kdl_robot,      kdl_planner, kdl_control)
+    ├── src/                # Source files and ROS2 nodes
+    ├── launch/             # Launch files
+    ├── config/             # Configuration parameters
+    └── action/             # Custom action definitions
+```
 
+---
      	
      	
 # 🦾 HM2 Setup & Usage Guide
