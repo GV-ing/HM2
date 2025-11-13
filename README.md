@@ -61,7 +61,7 @@ The following variables become ROS2 params: traj_duration, acc_duration, total_t
 
 ```bash
 ros2 launch iiwa_bringup iiwa.launch.py command_interface:=position robot_controller:=iiwa_arm_controller
-ros2 launch ros2_kdl_package ros2_kdl_node_launch.py
+ros2 launch ros2_kdl_package ros2_kdl_node.launch.py
 ```
 
 ---
@@ -83,10 +83,10 @@ We can also switch between the two velocity controllers creating an additional p
 #### Example Command
 
 ```bash
-ros2 launch ros2_kdl_package ros2_kdl_node_launch.py cmd_interface:=velocity ctrl:=velocity_ctrl_null 
+ros2 launch ros2_kdl_package ros2_kdl_node.launch.py cmd_interface:=velocity ctrl:=velocity_ctrl_null 
 ```
 ```bash
-ros2 launch ros2_kdl_package ros2_kdl_node_launch.py cmd_interface:=velocity ctrl:=velocity_ctrl
+ros2 launch ros2_kdl_package ros2_kdl_node.launch.py cmd_interface:=velocity ctrl:=velocity_ctrl
 ```
 
 ---
@@ -102,7 +102,7 @@ ros2 launch iiwa_bringup iiwa.launch.py command_interface:=position robot_contro
 ```
 
 ```bash
-ros2 launch ros2_kdl_package ros2_kdl_node_launch.py enable_action_server:=true
+ros2 launch ros2_kdl_package ros2_kdl_node.launch.py enable_action_server:=true
 ```
 
 ```bash
@@ -162,7 +162,7 @@ ros2 run aruco_ros single --ros-args \
 ```
 
 ```bash
-ros2 launch ros2_kdl_package ros2_kdl_node_launch.py   cmd_interface:=velocity   ctrl:=vision
+ros2 launch ros2_kdl_package ros2_kdl_node.launch.py   cmd_interface:=velocity   ctrl:=vision
 ```
 
 
